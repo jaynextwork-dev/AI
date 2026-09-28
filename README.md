@@ -49,6 +49,10 @@ flowchart TD
 - 검수관이 "아직 아님"이라고 하면 실패가 아니다. 증거를 채우라는 뜻이다.
 - 직원이 부족해지면 그때 한 명씩 더 만든다. 처음부터 다 만들지 않는다.
 
+## 텔레그램으로 말 걸기
+
+폰의 텔레그램에서 티파니에게 말을 걸고 답을 받을 수 있다. 설치와 사용법은 [`telegram/README.md`](telegram/README.md). 켜는 건 `start-telegram.cmd`.
+
 ## 직원 추가하기
 
 `.claude/agents/이름.md` 파일을 만들면 된다. 맨 위 frontmatter에서 `model`(haiku/sonnet/opus), `tools`, `maxTurns`를 정하고, 본문에 성격과 일하는 순서를 적는다. 새 세션을 열면 자동으로 읽힌다.
