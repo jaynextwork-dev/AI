@@ -18,3 +18,13 @@
 - [ ] 2 토큰 파일 삭제
 - [ ] 3 바로가기 정리
 - [ ] 4 봇 삭제
+
+# 인수인계 2: 사용량 알림 훅 확인 (로컬 티파니가 할 일)
+
+이 저장소에 `UserPromptSubmit` 훅(`.claude/hooks/context-guard.sh`, bash 스크립트)을 넣었다. 클라우드(리눅스)에서는 테스트를 통과했다. 선배 윈도우 PC에서도 도는지 확인한다.
+
+1. Git Bash가 있는지 확인한다(`bash --version`). 있으면 훅이 그대로 돈다.
+2. 없으면 같은 동작을 PowerShell 스크립트(`context-guard.ps1`)로 옮기고, `.claude/settings.json`의 command를 그 스크립트로 바꾼다. 동작: stdin JSON의 `transcript_path`를 읽고, 메인 대화의 마지막 assistant 줄에서 `input_tokens + cache_read_input_tokens + cache_creation_input_tokens`를 더해 15만 이상이면 알림, 30만 이상이면 강한 경고를 낸다.
+3. 큰 대화 하나에서 메시지를 보내 알림이 뜨는지 본다. 결과를 아래에 적고 커밋·푸시한다.
+
+- [ ] 윈도우에서 훅 동작 확인

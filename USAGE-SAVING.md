@@ -36,6 +36,9 @@ Esc 한 번이면 멈춘다. 끝까지 두고 다시 시키는 게 제일 비싸
 
 ## 저장소에 이미 들어간 것
 
+- 대화가 15만 토큰을 넘으면 알림, 30만을 넘으면 강한 경고가 뜬다 (`.claude/hooks/context-guard.sh`)
+- 새 작업을 시작하면 티파니가 맞는 모델·생각 강도를 한 줄로 추천한다 (`.claude/skills/model-advisor/`)
+
 - 쉬운 일은 Haiku 직원(quick-worker), 나머지 직원은 Sonnet (`.claude/agents/`)
 - 워커 4개 넘는 일은 시작 전 비용 컨펌 (`CLAUDE.md` 비용 가드)
 - 티파니가 지킬 절약 규칙, 요약할 때 남길 것 (`CLAUDE.md` "사용량 절약", "Compact instructions")
